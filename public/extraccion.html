@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Extracción - Azure IA</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-semibold" href="#">
+                <i class="bi bi-cpu"></i>
+                Azure IA
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sentimientos.html">
+                            Sentimientos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="imagen.html">
+                            Imagen
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="extraccion.html">
+                            Extracción
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-12 col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+
+                <h5 class="fw-semibold mb-4">
+                    Menú
+                </h5>
+
+                <div class="list-group list-group-flush">
+
+                    <a href="index.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-house-door me-2"></i>
+                        Inicio
+
+                    </a>
+
+                    <a href="sentimientos.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-chat-square-text me-2"></i>
+                        Sentimientos
+
+                    </a>
+
+                    <a href="imagen.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-image me-2"></i>
+                        Imagen
+
+                    </a>
+
+                    <a href="extraccion.html"
+                        class="list-group-item list-group-item-action border-0 active">
+
+                        <i class="bi bi-file-earmark-text me-2"></i>
+                        Extracción
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+            <!-- MAIN -->
+            <main class="col-12 col-md-9 col-lg-10 p-4">
+
+                <!-- HEADER -->
+                <div class="mb-5">
+
+                    <h1 class="fw-bold">
+                        Extracción de Información
+                    </h1>
+
+                    <p class="text-muted">
+                        Extrae entidades y datos clave utilizando Azure AI Language.
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- TEXTO -->
+                    <div class="col-12 col-lg-8">
+
+                        <div class="card border-0 shadow-sm h-100">
+
+                            <div class="card-body p-4">
+
+                                <label for="textoUsuario"
+                                    class="form-label fw-semibold">
+
+                                    Ingrese texto
+
+                                </label>
+
+                                <textarea id="textoUsuario"
+                                    class="form-control"
+                                    rows="10"
+                                    placeholder="Escriba aquí el texto a analizar..."></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FILTROS -->
+                    <div class="col-12 col-lg-4">
+
+                        <div class="card border-0 shadow-sm h-100">
+
+                            <div class="card-body p-4">
+
+                                <h5 class="fw-semibold mb-4">
+                                    Filtros de Datos
+                                </h5>
+
+                                <div class="form-check mb-3">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="DateTime"
+                                        id="datetime">
+
+                                    <label class="form-check-label"
+                                        for="datetime">
+
+                                        DateTime
+
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check mb-3">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="Organization"
+                                        id="organization">
+
+                                    <label class="form-check-label"
+                                        for="organization">
+
+                                        Organization
+
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check mb-3">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="PersonType"
+                                        id="persontype">
+
+                                    <label class="form-check-label"
+                                        for="persontype">
+
+                                        PersonType
+
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check mb-3">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="Location"
+                                        id="location">
+
+                                    <label class="form-check-label"
+                                        for="location">
+
+                                        Location
+
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check mb-3">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="Person"
+                                        id="person">
+
+                                    <label class="form-check-label"
+                                        for="person">
+
+                                        Person
+
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input filtro-entidad"
+                                        type="checkbox"
+                                        value="Quantity"
+                                        id="quantity">
+
+                                    <label class="form-check-label"
+                                        for="quantity">
+
+                                        Quantity
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BOTÓN -->
+                <div class="mt-4">
+
+                    <button id="btnEnviar"
+                        class="btn btn-dark">
+
+                        <i class="bi bi-search me-1"></i>
+                        Analizar Texto
+
+                    </button>
+
+                </div>
+
+                <!-- RESULTADO -->
+                <div class="card border-0 shadow-sm mt-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="mb-3">
+                            Resultado de la IA
+                        </h5>
+
+                        <div id="resultado"
+                            class="bg-light border rounded p-3">
+
+                            <p class="text-muted mb-0">
+                                Esperando texto para analizar...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-3">
+
+        <div class="container-fluid text-center text-muted">
+
+            © 2026 Azure IA
+
+        </div>
+
+    </footer>
+
+    <script src="./js/extraccion.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
