@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Análisis de Imagen</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-semibold" href="#">
+                <i class="bi bi-cpu"></i>
+                Azure IA
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sentimientos.html">
+                            Sentimientos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="imagen.html">
+                            Imagen
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-12 col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+
+                <h5 class="fw-semibold mb-4">
+                    Menú
+                </h5>
+
+                <div class="list-group list-group-flush">
+
+                    <a href="index.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-house-door me-2"></i>
+                        Inicio
+
+                    </a>
+
+                    <a href="sentimientos.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-chat-square-text me-2"></i>
+                        Sentimientos
+
+                    </a>
+
+                    <a href="imagen.html"
+                        class="list-group-item list-group-item-action border-0 active">
+
+                        <i class="bi bi-image me-2"></i>
+                        Imagen
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+            <!-- MAIN -->
+            <main class="col-12 col-md-9 col-lg-10 p-4">
+
+                <!-- HEADER -->
+                <div class="mb-5">
+
+                    <h1 class="fw-bold">
+                        Análisis de Imagen
+                    </h1>
+
+                    <p class="text-muted">
+                        Analiza imágenes utilizando Azure Cognitive Services.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="card border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-4">
+
+                            <label for="urlUsuario" class="form-label fw-semibold">
+                                URL de la imagen
+                            </label>
+
+                            <input type="text"
+                                id="urlUsuario"
+                                class="form-control"
+                                value="https://static.vecteezy.com/system/resources/thumbnails/079/131/527/small/thinking-woman-and-relax-with-coffee-at-house-for-peace-daydreaming-and-calm-morning-smile-female-person-and-caffeine-beverage-with-reflection-nostalgia-memory-and-perspective-for-weekend-break-photo.jpg">
+
+                        </div>
+
+                        <button id="btnEnviar"
+                            class="btn btn-dark">
+
+                            <i class="bi bi-search me-1"></i>
+                            Analizar Imagen
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- RESULTADO -->
+                <div class="card border-0 shadow-sm mt-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="mb-3">
+                            Resultado de la IA
+                        </h5>
+
+                        <pre id="resultado"
+                            class="bg-light border rounded p-3 mb-0">Esperando imagen...</pre>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-3">
+
+        <div class="container-fluid text-center text-muted">
+
+            © 2026 Azure IA
+
+        </div>
+
+    </footer>
+
+    <script src="./js/imagen.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

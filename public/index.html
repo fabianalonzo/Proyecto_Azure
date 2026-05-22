@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Azure IA</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-semibold" href="#">
+                <i class="bi bi-cpu"></i>
+                Azure IA
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sentimientos.html">
+                            Sentimientos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="imagen.html">
+                            Imagen
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-12 col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+
+                <h5 class="fw-semibold mb-4">
+                    Menú
+                </h5>
+
+                <div class="list-group list-group-flush">
+
+                    <a href="index.html"
+                        class="list-group-item list-group-item-action border-0 active">
+
+                        <i class="bi bi-house-door me-2"></i>
+                        Inicio
+
+                    </a>
+
+                    <a href="sentimientos.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-chat-square-text me-2"></i>
+                        Sentimientos
+
+                    </a>
+
+                    <a href="imagen.html"
+                        class="list-group-item list-group-item-action border-0">
+
+                        <i class="bi bi-image me-2"></i>
+                        Imagen
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+            <!-- MAIN -->
+            <main class="col-12 col-md-9 col-lg-10 p-4">
+
+                <!-- HEADER -->
+                <div class="mb-5">
+
+                    <h1 class="fw-bold">
+                        Bienvenido a Azure IA
+                    </h1>
+
+                    <p class="text-muted">
+                        Plataforma para análisis de sentimientos e imágenes usando Azure Cognitive Services.
+                    </p>
+
+                </div>
+
+                <!-- CARDS -->
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-lg-6">
+
+                        <div class="card border-0 shadow-sm h-100">
+
+                            <div class="card-body p-4">
+
+                                <i class="bi bi-chat-square-text display-6 mb-3"></i>
+
+                                <h3 class="h5">
+                                    Análisis de Sentimientos
+                                </h3>
+
+                                <p class="text-muted">
+                                    Detecta emociones y opiniones en textos utilizando IA.
+                                </p>
+
+                                <a href="sentimientos.html"
+                                    class="btn btn-dark">
+
+                                    Ir al servicio
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-lg-6">
+
+                        <div class="card border-0 shadow-sm h-100">
+
+                            <div class="card-body p-4">
+
+                                <i class="bi bi-image display-6 mb-3"></i>
+
+                                <h3 class="h5">
+                                    Análisis de Imagen
+                                </h3>
+
+                                <p class="text-muted">
+                                    Analiza imágenes y detecta contenido visual mediante Azure IA.
+                                </p>
+
+                                <a href="imagen.html"
+                                    class="btn btn-dark">
+
+                                    Ir al servicio
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-3">
+
+        <div class="container-fluid text-center text-muted">
+
+            © 2026 Azure IA
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
