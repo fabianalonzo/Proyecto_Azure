@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Azure IA</title>
+    <title>Modelo IA (Una pregunta) - Azure IA</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
+                        <a class="nav-link" href="index.html">
                             Inicio
                         </a>
                     </li>
@@ -65,7 +65,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="modelo.html">
+                        <a class="nav-link active" href="modelo.html">
                             Modelo IA (Una pregunta)
                         </a>
                     </li>
@@ -93,7 +93,7 @@
                 <div class="list-group list-group-flush">
 
                     <a href="index.html"
-                        class="list-group-item list-group-item-action border-0 active">
+                        class="list-group-item list-group-item-action border-0">
 
                         <i class="bi bi-house-door me-2"></i>
                         Inicio
@@ -124,8 +124,8 @@
 
                     </a>
 
-                    <a href="modelo_ia.html"
-                        class="list-group-item list-group-item-action border-0">
+                    <a href="modelo.html"
+                        class="list-group-item list-group-item-action border-0 active">
 
                         <i class="bi bi-robot me-2"></i>
                         Modelo IA (Una pregunta)
@@ -143,133 +143,63 @@
                 <div class="mb-5">
 
                     <h1 class="fw-bold">
-                        Bienvenido a Azure IA
+                        Modelo de Inteligencia Artificial (Una pregunta)
                     </h1>
 
                     <p class="text-muted">
-                        Plataforma para análisis y procesamiento utilizando Azure Cognitive Services.
+                        Realiza preguntas y obtén respuestas utilizando Azure OpenAI.
                     </p>
 
                 </div>
 
-                <!-- CARDS -->
-                <div class="row g-4">
+                <!-- CARD -->
+                <div class="card border-0 shadow-sm">
 
-                    <!-- CARD 1 -->
-                    <div class="col-12 col-lg-3">
+                    <div class="card-body p-4">
 
-                        <div class="card border-0 shadow-sm h-100">
+                        <div class="mb-4">
 
-                            <div class="card-body p-4">
+                            <label for="preguntaUsuario"
+                                class="form-label fw-semibold">
 
-                                <i class="bi bi-chat-square-text display-6 mb-3"></i>
+                                Escribe tu pregunta
 
-                                <h3 class="h5">
-                                    Análisis de Sentimientos
-                                </h3>
+                            </label>
 
-                                <p class="text-muted">
-                                    Detecta emociones y opiniones en textos utilizando IA.
-                                </p>
-
-                                <a href="sentimientos.html"
-                                    class="btn btn-dark">
-
-                                    Ir al servicio
-
-                                </a>
-
-                            </div>
+                            <textarea id="preguntaUsuario"
+                                class="form-control"
+                                rows="5"
+                                placeholder="Ejemplo: ¿Qué es la inteligencia artificial?"></textarea>
 
                         </div>
 
-                    </div>
+                        <button id="btnEnviar"
+                            class="btn btn-dark">
 
-                    <!-- CARD 2 -->
-                    <div class="col-12 col-lg-3">
+                            <i class="bi bi-send me-1"></i>
+                            Consultar IA
 
-                        <div class="card border-0 shadow-sm h-100">
-
-                            <div class="card-body p-4">
-
-                                <i class="bi bi-image display-6 mb-3"></i>
-
-                                <h3 class="h5">
-                                    Análisis de Imagen
-                                </h3>
-
-                                <p class="text-muted">
-                                    Analiza imágenes y detecta contenido visual mediante Azure IA.
-                                </p>
-
-                                <a href="imagen.html"
-                                    class="btn btn-dark">
-
-                                    Ir al servicio
-
-                                </a>
-
-                            </div>
-
-                        </div>
+                        </button>
 
                     </div>
 
-                    <!-- CARD 3 -->
-                    <div class="col-12 col-lg-3">
+                </div>
 
-                        <div class="card border-0 shadow-sm h-100">
+                <!-- RESULTADO -->
+                <div class="card border-0 shadow-sm mt-4">
 
-                            <div class="card-body p-4">
+                    <div class="card-body p-4">
 
-                                <i class="bi bi-file-earmark-text display-6 mb-3"></i>
+                        <h5 class="mb-3">
+                            Respuesta de la IA
+                        </h5>
 
-                                <h3 class="h5">
-                                    Extracción de Información
-                                </h3>
+                        <div id="resultado"
+                            class="bg-light border rounded p-3">
 
-                                <p class="text-muted">
-                                    Extrae información importante desde documentos utilizando IA.
-                                </p>
-
-                                <a href="extraccion.html"
-                                    class="btn btn-dark">
-
-                                    Ir al servicio
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CARD 4 -->
-                    <div class="col-12 col-lg-3">
-
-                        <div class="card border-0 shadow-sm h-100">
-
-                            <div class="card-body p-4">
-
-                                <i class="bi bi-robot display-6 mb-3"></i>
-
-                                <h3 class="h5">
-                                    Modelo de IA (Una pregunta)
-                                </h3>
-
-                                <p class="text-muted">
-                                    Interactúa con un modelo de inteligencia artificial mediante Azure OpenAI.
-                                </p>
-
-                                <a href="modelo_ia.html"
-                                    class="btn btn-dark">
-
-                                    Ir al servicio
-
-                                </a>
-
-                            </div>
+                            <p class="text-muted mb-0">
+                                Esperando consulta...
+                            </p>
 
                         </div>
 
@@ -293,6 +223,8 @@
         </div>
 
     </footer>
+
+    <script src="./js/chat.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 

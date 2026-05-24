@@ -10,7 +10,9 @@ app.get('/api/config', (req, res) => {
         visionKey: process.env.AZURE_VISION_KEY,
         visionEndpoint: process.env.AZURE_VISION_ENDPOINT,
         languageKey: process.env.AZURE_LANGUAGE_KEY,
-        languageEndpoint: process.env.AZURE_LANGUAGE_ENDPOINT
+        languageEndpoint: process.env.AZURE_LANGUAGE_ENDPOINT,
+        chatEndpoint: process.env.AZURE_CHAT_ENDPOINT,
+        chatsuscriptionKey: process.env.AZURE_CHAT_KEY
     });
 });
 
